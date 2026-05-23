@@ -916,7 +916,7 @@ section { padding-block: var(--section-y); }
   }
   .mission__inner {
     display: grid;
-    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-columns: 0.45fr 0.55fr;
     gap: clamp(2rem, 6vw, 5rem);
     align-items: start;
   }
@@ -931,7 +931,14 @@ section { padding-block: var(--section-y); }
     .mission__inner { grid-template-columns: 1fr; }
   }
 
-  /* Pillars */
+  /* TOC mobile */
+  @media (max-width: 1024px) { .page-toc { display: none !important; } }
+
+  /* Don section mobile */
+  @media (max-width: 680px) {
+    .don-mobile-wrap { flex-direction: column !important; }
+    .don-mobile-wrap > div { min-width: unset !important; max-width: 100% !important; text-align: left !important; }
+  }
   .pillars {
     background: var(--bg-alt);
     border-block: 1px solid color-mix(in oklch, var(--ink) 7%, transparent);
@@ -1716,7 +1723,7 @@ section { padding-block: var(--section-y); }
   <!-- MISSION + DON -->
   <section id="mission" data-screen-label="05 Mission" style="background:var(--bg); border-top:1px solid color-mix(in oklch,var(--ink) 7%,transparent); border-bottom:1px solid color-mix(in oklch,var(--ink) 7%,transparent);">
     <div class="container">
-      <div class="mission__inner" style="display:grid; grid-template-columns:0.45fr 0.55fr; gap:clamp(2.5rem,6vw,5rem); align-items:center; padding-block:clamp(3rem,6vw,5rem);">
+      <div class="mission__inner" style="display:grid; gap:clamp(2.5rem,6vw,5rem); align-items:center; padding-block:clamp(3rem,6vw,5rem);">
         <div>
           <span class="eyebrow">Notre mission</span>
           <h2 style="margin-top:0.85rem; font-size:clamp(1.8rem,3.2vw,2.7rem);">Tisser des liens, transmettre une foi consciente et contribuer à une société fraternelle.</h2>
@@ -1733,7 +1740,7 @@ section { padding-block: var(--section-y); }
   </section>
 
   <section id="don" data-screen-label="08 Don" style="background:var(--violet-900);">
-    <div style="max-width:var(--container); margin:0 auto; padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem); display:flex; align-items:center; justify-content:space-between; gap:3rem; flex-wrap:wrap;">
+    <div style="max-width:var(--container); margin:0 auto; padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,4rem); display:flex; align-items:center; justify-content:space-between; gap:3rem; flex-wrap:wrap;" class="don-mobile-wrap">
       <div style="flex:1; min-width:260px;">
         <span class="eyebrow" style="color:var(--gold-soft);">Nous soutenir</span>
         <h2 style="color:#f5f0e8; font-size:clamp(1.5rem,2.5vw,2.1rem); margin-top:0.75rem;">Chaque don est une brique posée pour ceux qui viennent après nous.</h2>
@@ -1778,7 +1785,7 @@ section { padding-block: var(--section-y); }
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid color-mix(in oklch, var(--beige-100) 30%, transparent);border-radius:50%;color:var(--beige-100);transition:all .2s;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V9.9H7.6V13h2.7v8h3.2z"/></svg>
         </a>
-        <a href="https://www.instagram.com/fmc7.8?igsh=cjhuM3NuM2o0Z2pj" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid color-mix(in oklch, var(--beige-100) 30%, transparent);border-radius:50%;color:var(--beige-100);transition:all .2s;">
+        <a href="https://www.instagram.com/fmc7.8" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid color-mix(in oklch, var(--beige-100) 30%, transparent);border-radius:50%;color:var(--beige-100);transition:all .2s;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
         </a>
       </div>
